@@ -7,7 +7,7 @@
 name: Java CI with Gradle
 on:
   pull_request:
-    branches: [ main ]
+    branches: [ develop, main ]
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -18,7 +18,6 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-          fetch-depth: 0
       - name: Grant execute permissions for gradlew
         run: chmod +x gradlew
       - name: Build with Gradle
